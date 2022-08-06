@@ -5,7 +5,7 @@ import {
     Switch,
     Route,
     Link
-} from "react-router-dom";
+} from "react-router-dom"; 
 
 import Home from './Home';
 import Contact from './Contact';
@@ -22,7 +22,7 @@ export default class NavbarComp extends Component {
             <Router>
                 <div>
 
-                    <Navbar bg="dark" variant={"dark"} expand="lg">
+                    <Navbar bg="light"  expand="lg">
                         
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
