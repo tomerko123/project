@@ -12,7 +12,7 @@ const Footer = () => <footer className="page-footer font-small blue pt-4">
         <div className="row">
             <div className="col-md-6 mt-md-0 mt-3">
                 <h5 className="text-uppercase">{testJson[0].ClubN}</h5>
-                <p>{testJson[0].About}</p>
+                <p>{testJson[0].Small}</p>
             </div>
 
             
