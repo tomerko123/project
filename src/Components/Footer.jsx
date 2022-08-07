@@ -1,48 +1,31 @@
-import React from 'react';
-import { MDBFooter } from 'mdb-react-ui-kit';
+import React from "react"
 import "../json/jsonFile.json";
 
-export default function Footer() {
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import Clubs from './pages/Clubs';
 
-
-  const testJson = require("../json/jsonFile.json")
-  return (
-    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
-
-      <section className=''>
-        <div className='container text-center text-md-start mt-5'>
-          <div className='row mt-3'>
-            <div className='col-md-3 col-lg-4 col-xl-3 mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>
-                <i className='fas fa-gem me-3'></i>{testJson[0].ClubN}
-              </h6>
-              <p>
-              {testJson[0].About}
-              </p>
+const testJson = require("../json/jsonFile.json")
+const Footer = () => <footer className="page-footer font-small blue pt-4">
+    <div className="container-fluid text-center text-md-left">
+        <div className="row">
+            <div className="col-md-6 mt-md-0 mt-3">
+                <h5 className="text-uppercase">{testJson[0].ClubN}</h5>
+                <p>{testJson[0].About}</p>
             </div>
 
-            <div className='col-md-3 col-lg-2 col-xl-2 mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Pricing
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Settings
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Orders
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Help
-                </a>
-              </p>
+            
+            <hr className="clearfix w-100 d-md-none pb-0"/>
+
+            <div className="col-md-3 mb-md-0 mb-3">
+                <h5 className="text-uppercase">Links</h5>
+                <ul className="list-unstyled">
+                    <li><a href="Home">Home</a></li>
+                    <li><a href="Contact">Contact</a></li>
+                    <li><a href="About">About</a></li>
+                    <li><a href="Clubs">Clubs</a></li>
+                </ul>
             </div>
 
             <div className='col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4'>
@@ -61,16 +44,11 @@ export default function Footer() {
               </p>
               
             </div>
-          </div>
         </div>
-      </section>
+    </div>
 
-      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2021 Copyright:
-        <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
-        </a>
-      </div>
-    </MDBFooter>
-  );
-}
+   
+
+</footer>
+
+export default Footer
