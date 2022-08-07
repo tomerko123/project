@@ -7,12 +7,12 @@ import {
     Link
 } from "react-router-dom"; 
 
-import Home from './Home';
-import Contact from './Contact';
-import About from './About';
-import Clubs from './Clubs';
-import Cancel from './Cancel';
-import SignUp_new from './SignUp_new';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import Clubs from './pages/Clubs';
+import Cancel from './pages/Cancel';
+import SignUp_new from './pages/SignUp_new';
 
 
 

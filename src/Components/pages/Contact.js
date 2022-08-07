@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import "../json/jsonFile.json";
+import  testJson1 from "../../json/jsonFile.json";
 
 function Contact() {
-    const testJson = require("../json/jsonFile.json")
+    const testJson = require("../../json/jsonFile.json"); 
     return(
         <div>
             
