@@ -1,10 +1,11 @@
 import React from 'react';
 import { MDBFooter } from 'mdb-react-ui-kit';
+import "../json/jsonFile.json";
 
 export default function Footer() {
 
 
-
+  const testJson = require("../json/jsonFile.json")
   return (
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
 
@@ -13,11 +14,10 @@ export default function Footer() {
           <div className='row mt-3'>
             <div className='col-md-3 col-lg-4 col-xl-3 mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
-                <i className='fas fa-gem me-3'></i>Company name
+                <i className='fas fa-gem me-3'></i>{testJson[0].ClubN}
               </h6>
               <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit.
+              {testJson[0].About}
               </p>
             </div>
 
@@ -48,20 +48,18 @@ export default function Footer() {
             <div className='col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p>
-                <i className='fas fa-home me-3'></i> New York, NY 10012, US
+                <i className='fas fa-home me-3'></i> {testJson[0].Address}
               </p>
               <p>
                 <i className='fas fa-envelope me-3'></i>
-                info@example.com
+                {testJson[0].Email}
               
 
               </p>
               <p>
-                <i className='fas fa-phone me-3'></i> + 01 234 567 88
+                <i className='fas fa-phone me-3'></i> {testJson[0].Phone}
               </p>
-              <p>
-                <i className='fas fa-print me-3'></i> + 01 234 567 89
-              </p>
+              
             </div>
           </div>
         </div>

@@ -37,6 +37,7 @@ function slider() {
     {
       image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
       caption: "Darjeeling"
+
     }
   ];
 
