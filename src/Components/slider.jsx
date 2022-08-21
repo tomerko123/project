@@ -61,7 +61,7 @@ function slider() {
           <Carousel
             data={data}
             time={2000}
-            width="850px"
+            width="200%"
             height="500px"
             captionStyle={captionStyle}
             radius="10px"
@@ -78,7 +78,7 @@ function slider() {
             thumbnailWidth="100px"
             style={{
               textAlign: "center",
-              maxWidth: "850px",
+              maxWidth: "200%",
               maxHeight: "500px",
               margin: "40px auto",
             }}
