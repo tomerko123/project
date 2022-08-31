@@ -7,7 +7,9 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "mdb-react-ui-kit": "^4.1.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.5.0",
@@ -17,6 +19,7 @@
     "react-router-dom": "^5.3.3",
     "react-scripts": "4.0.3",
     "react-slideshow-image": "^4.0.4",
+    "react-use-effect": "0.0.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
