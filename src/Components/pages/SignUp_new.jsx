@@ -1,27 +1,45 @@
 import React from "react";
 
 function SignUp_new() {
-    // functions 
+
+  const handleSubmit = (e) => {
+  e.preventDefault(); 
+  const firstName = e.target.firstName.value; 
+  const lastName = e.target.lastName.value; 
+  const id = e.target.id.value; 
+  const Date_of_birth = e.target.Date_of_birth.value; 
+  const parent_name = e.target.parent_name.value; 
+  const mobile = e.target.mobile.value; 
+  const email = e.target.email.value; 
+  const payment = e.target.payment.value; 
+  const group = e.target.group.value; 
+  const yes = e.target.yes.value; 
+  const no = e.target.no.value; 
+  const info = e.target.no.value; 
+  
+    alert(`{First_Name: ${firstName} , Last_Name: ${lastName} , ID: ${id} , Date_of_birth: ${Date_of_birth}}`); 
+  }; 
+
     return(
-        <div>
-           <form>
+        <div className="SingUpPage">
+           <form onSubmit={handleSubmit}>
             <div>
             <label>שם פרטי:
-            <input type="text" />
+            <input type="text" name="firstName"/>
             </label>
 
             <label>שם משפחה:
-            <input type="text" />
+            <input type="text" name="lastName"/>
             </label>
 
             </div>
             <div>
             <label> תעודת זהות:
-            <input type="text" />
+            <input type="text" name="id"/>
             </label>
 
             <label> תאריך לידה:
-            <input type="date"/>
+            <input type="date" name="Date_of_birth"/>
             </label>
 
             
@@ -31,16 +49,16 @@ function SignUp_new() {
 
         <div>
            <label> שם ההורה:
-            <input type="text" />
+            <input type="text" name="parent_name"/>
             </label>
 
 
             <label> טלפון:
-            <input type="tel" pattern="[0-9]{3}-[0-9]{7}" />
+            <input type="tel" pattern="[0-9]{3}-[0-9]{7}" name="mobile"/>
             </label>
 
             <label> דואר אלקטרוני:
-            <input type="email" />
+            <input type="email" name="email" />
             </label>
 </div>
 
@@ -48,7 +66,7 @@ function SignUp_new() {
 
 <label for="אופן תשלום">אופן תשלום:</label>
 
-<select id="אופן תשלום">
+<select id="אופן תשלום" name="payment">
 <option value="הוראת קבע באשראי">הוראת קבע באשראי</option>
         <option value="מזומן">מזומן</option>
         <option value="צ'קים">צ'קים</option>
@@ -59,7 +77,7 @@ function SignUp_new() {
 <div>
 <label for=" קבוצה ">בחר קבוצה :</label>
 
-<select id="קבוצה ">
+<select id="קבוצה " name="group">
 <option value=" א-ג מתחילים ">א-ג מתחילים   </option>
         <option value=" ד-ו מתחילים">ד-ו מתחילים</option>
         <option value="ז' ומעלה מתחילים">ז' ומעלה מתחילים</option>
@@ -142,19 +160,19 @@ function SignUp_new() {
     <legend> </legend>
 
     <div>
-      <input type="radio" id="yes" name="בריאות" value="כן" />
+      <input type="radio" id="yes" name="yes" value="כן" />
       <label for="כן">כן</label>
     </div>
 
     <div>
-      <input type="radio" id="no" name="בריאות" value="לא" />
+      <input type="radio" id="no" name="no" value="לא" />
       <label for="לא">לא</label>
     </div>
 
     </fieldset>
 
     <label> במקרה שהתשובה היא לא אנא פרט:
-            <input
+            <input name="info"
           type="text" />
           </label>
 </div>

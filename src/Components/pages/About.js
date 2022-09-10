@@ -1,24 +1,15 @@
 import React, { useEffect , useState } from 'react'
-import jsonFile2 from "../../json/jsonFile2.json";
+import Data from "../../json/jsonFile2.json";
 import axios from "axios"; 
 
 
-function thisPage1() {
-    // const [testJson , setTestJson] = React.useState([]); 
-    /*  
-    useEffect(() => {
-        axios
-        .get("../../json/jsonFile2.json")
-        .then((res) => setTestJson(res.data)) 
-        .catch(err => console.log(err)) 
-    } , []); 
-    */
-    // const testJson = require("../../json/jsonFile2.json"); 
+function About() {
+
     return(
         
         <div> 
-            {jsonFile2 &&
-        jsonFile2?.map(({ Instagram ,  Facebook , AboutManger ,  Manager ,  About , Small ,Phone , Email , Address , ClubN, Id }) => (
+          
+            {Data.map(({ Instagram ,  Facebook , AboutManger ,  Manager ,  About , Small ,Phone , Email , Address , ClubN, Id }) => (
           <div key={Id}>
             <div>{ClubN}</div>
             <div>{Address}</div>
@@ -37,4 +28,4 @@ function thisPage1() {
 }
 
 
-export default thisPage1;
+export default About;

@@ -1,38 +1,46 @@
 import React from "react";
-import "../../json/jsonFile.json";
+import Data from "../../json/jsonFile.json";
 
 function Clubs() {
-    const testJson = require("../../json/jsonFile.json")
+    const testJson = require("../../json/jsonFile.json"); 
+    console.log(Data[0].ClubN);
     return(
-        <div>
-            
+        <div id="Clubs">
             <div>
-            <div>שם המועדון: {testJson[1].ClubN}</div>
-            <div>על המועדון: {testJson[1].About}</div>
-            <div>טלפון המועדון: {testJson[1].Phone}</div>
-            <div>מייל המועדון: {testJson[1].Email}</div>
-            <div>מאמן : {testJson[1].Coaches}</div>
-            <div>על המאמן : {testJson[1].AboutCoach}</div>
-            <div>ימים : {testJson[1].Days}</div>
-            <div>שעות : {testJson[1].Hours}</div>
-            </div>
-
-            <div> 
-            <div>שם המועדון: {testJson[2].ClubN}</div>
-            <div>על המועדון: {testJson[2].About}</div>
-            <div>טלפון המועדון: {testJson[2].Phone}</div>
-            <div>מייל המועדון: {testJson[2].Email}</div>
-            <div>מאמן : {testJson[2].Coaches}</div>
-            <div>על המאמן : {testJson[2].AboutCoach}</div>
-            <div>ימים : {testJson[2].Days}</div>
-            <div>שעות : {testJson[2].Hours}</div>
+            <div>שם המועדון: {Data[0].ClubN}</div>
+            <div>על המועדון: {Data[0].About}</div>
+            <div>טלפון המועדון: {Data[0].Phone}</div>
+            <div>מייל המועדון: {Data[0].Email}</div>
+            <div>מאמן: {Data[0].Coaches[0].Coach}</div>
+            <div>על המאמן: {Data[0].Coaches[0].AboutCoach}</div>
+            {Data[0].OpeningHours.map(function (OpeningHours){
+                return(
+                    <div>
+                        <div>יום: {OpeningHours.Day}</div>
+                        <div>שעות: {OpeningHours.Hours}</div>
+                    </div>
+                );
+            })}
             </div>
             
+            <div> 
+            <div>שם המועדון: {Data[1].ClubN}</div>
+            <div>על המועדון: {Data[1].About}</div>
+            <div>טלפון המועדון: {Data[1].Phone}</div>
+            <div>מייל המועדון: {Data[1].Email}</div>
+            <div>מאמן : {Data[1].Coaches[1].Coach}</div>
+            <div>על המאמן : {Data[1].Coaches[1].AboutCoach}</div>
+            {Data[1].OpeningHours.map(function (OpeningHours){
+                return(
+                    <div>
+                        <div>יום: {OpeningHours.Day}</div>
+                        <div>שעות: {OpeningHours.Hours}</div>
+                    </div>
+                );
+            })}
+            </div>
 
         </div>
-        
-        
-        
     ); 
 
     
