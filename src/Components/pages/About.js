@@ -1,7 +1,7 @@
 import React, { useEffect , useState } from 'react'
 import Data from "../../json/jsonFile2.json";
 import axios from "axios"; 
-
+import './About.css';
 
 function About() {
 

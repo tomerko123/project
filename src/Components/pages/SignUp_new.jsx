@@ -1,4 +1,5 @@
 import React from "react";
+import './SignUp.css';
 
 function SignUp_new() {
 
@@ -32,8 +33,8 @@ function SignUp_new() {
             <input type="text" name="lastName"/>
             </label>
 
-            </div>
-            <div>
+            
+            
             <label> תעודת זהות:
             <input type="text" name="id"/>
             </label>
@@ -54,7 +55,7 @@ function SignUp_new() {
 
 
             <label> טלפון:
-            <input type="tel" pattern="[0-9]{3}-[0-9]{7}" name="mobile"/>
+            <input type="tel" name="mobile"/>
             </label>
 
             <label> דואר אלקטרוני:
@@ -91,7 +92,7 @@ function SignUp_new() {
 
     
     
-      <div>
+      <div className="takanon">
 <p>
 •	לא יינתן החזר כספי בגין היעדרות משיעור מכל סיבה שהיא.
 </p>
@@ -146,8 +147,9 @@ function SignUp_new() {
 <p>
 •	פעילות החוג עד סוף יולי
 </p>
-
-      <label> מאשר תקנון
+</div>
+<div>
+      <label className="confirmTakanon"> מאשר תקנון
             <input type="checkbox" id="מאשר תקנון" name="מאשר תקנון" required/>
             </label>
       </div>
@@ -157,7 +159,7 @@ function SignUp_new() {
 :הצהרת בריאות
 <div>בחתימתי על התקנון הריני מצהיר כי מצב בריאות בני/בתי תקין ומאפשר לו לבצע מאמצים גופניים במסגרת פעילות החוג. </div>
 <fieldset>
-    <legend> </legend>
+    
 
     <div>
       <input type="radio" id="yes" name="yes" value="כן" />
@@ -171,10 +173,10 @@ function SignUp_new() {
 
     </fieldset>
 
-    <label> במקרה שהתשובה היא לא אנא פרט:
-            <input name="info"
-          type="text" />
-          </label>
+    <h5 className="health"> במקרה שהתשובה היא לא אנא פרט:
+            
+            </h5>
+            <textarea name="info" id="" cols="50" rows="5"></textarea>
 </div>
 
    

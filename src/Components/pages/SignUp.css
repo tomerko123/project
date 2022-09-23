@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    direction: rtl;
+    margin: 10px;
+}
+
+div{
+    margin-top: 10px;
+}
+
+
+label{
+    margin-left: 10px;
+}
+
+input{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.takanon{
+    text-align: right;
+}
+.confirmTakanon{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    
+}

@@ -6,6 +6,7 @@ import {
     Route,
     Link
 } from "react-router-dom"; 
+import './NavbarComp.css';
 
 import Home from './pages/Home';
 import Contact from './pages/Contact';
@@ -20,23 +21,23 @@ export default class NavbarComp extends Component {
     render() {
         return (
             <Router>
-                <div>
+                <div className='header' >
 
-                    <Navbar bg="light"  expand="lg">
+                    <Navbar  expand="lg" fixed="top">
                         
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav
                                 className="mr-auto my-2 my-lg-0"
-                                style={{ maxHeight: '100px' }}
+                                style={{ maxHeight: '250px' }}
                                 navbarScroll
                             >
-                                <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                                <Nav.Link as={Link} to="/about">About</Nav.Link>
-                                <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-                                <Nav.Link as={Link} to="/Clubs">Clubs</Nav.Link>
-                                <Nav.Link as={Link} to="/Cancel">Cancel</Nav.Link>
-                                <Nav.Link as={Link} to="/SignUp_new">SignUp_new</Nav.Link>
+                                <Nav.Link as={Link} to="/home">בית</Nav.Link>
+                                <Nav.Link as={Link} to="/about">אודות</Nav.Link>
+                                <Nav.Link as={Link} to="/Clubs">מועדונים</Nav.Link>
+                                <Nav.Link as={Link} to="/SignUp_new">הרשמה</Nav.Link>
+                                <Nav.Link as={Link} to="/Cancel">ביטול הרשמה</Nav.Link>
+                                <Nav.Link as={Link} to="/contact">צור קשר</Nav.Link>
 
                             </Nav>
 
